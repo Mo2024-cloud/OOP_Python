@@ -15,7 +15,7 @@ class BankAccount:
     #Getter Method to withdraw money
     def withdraw_money(self, balance):
         if 0 < balance <= self.__balance:
-            self.__balance-= balance
+            self.__balance-= balance + (balance * 0.1)
             print(f"You withdraw {balance} and Your amount now is {self.__balance}")
         else:
             print("Insufficient funds or invalid withdrawal amount.")
